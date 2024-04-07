@@ -9,7 +9,6 @@ It is programmed following the lectures, but I have reformatted several things o
 
 I have used the following technologies in this project:
 - Vue3
-- Composition API
 - TypeScript
 - Pinia
 - Vue Router
@@ -18,4 +17,4 @@ I have been working in IntelliJ IDEA, also using:
 - ESLint
 - GitHub CoPilot
 
-I haven't been focusing on the design in CSS, so this is just copy-paste from the course project.
+I haven't been focusing on the design in CSS, so the design is just copy-paste from the course project.
