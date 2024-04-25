@@ -18,3 +18,10 @@ I have been working in IntelliJ IDEA, also using:
 - GitHub CoPilot
 
 I haven't been focusing on the design in CSS, so the design is just copy-paste from the course project.
+
+
+
+#
+**Setting up and running the project:**
+- yarn install
+- yarn run serve
