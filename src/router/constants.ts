@@ -23,7 +23,7 @@ export const ROUTES: IRoutes = {
     name: 'coach'
   },
   CONTACT: { // child for coaches -> /coaches/:id/contact
-    path: 'contact',
+    path: '/coaches/:id/contact',
     name: 'contact'
   },
   REGISTER: {

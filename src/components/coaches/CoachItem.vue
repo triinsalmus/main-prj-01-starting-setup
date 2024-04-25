@@ -2,12 +2,13 @@
 import { computed, defineProps } from 'vue';
 import { ref } from 'vue';
 import { ROUTES } from '@/router/constants';
+import BaseButton from '@/components/ui/BaseButton.vue';
 
 const props = defineProps(['id', 'firstName', 'lastName', 'areas', 'rate']);
 const fullName = ref(props.firstName + ' ' + props.lastName);
 const coachesUrls = computed(() => ({
+  contact: ({ path: ROUTES.CONTACT.path }),
   details: ({ path: ROUTES.COACH_DETAILS.path, params: { id: props.id } }),
-  contact: ({ path: ROUTES.CONTACT.path })
 }));
 </script>
 
@@ -17,12 +18,12 @@ const coachesUrls = computed(() => ({
     <h4>${{ rate }}/hour</h4>
     <div>
       <ul>
-        <li v-for="area in areas" :key="area">{{ area }}</li>
+        <li v-for="area in areas" :key="area.id">{{ area }}</li>
       </ul>
     </div>
     <div class="actions">
-      <router-link :to="coachesUrls.contact">Contact</router-link>
-      <router-link :to="coachesUrls.details">View details</router-link>
+      <BaseButton mode="outline" :to="coachesUrls.contact.path">Contact</BaseButton>
+      <BaseButton link :to="coachesUrls.details.path">View details</BaseButton>
     </div>
   </li>
 </template>
